@@ -1,0 +1,10 @@
+{
+  "ShowPasek": true,
+  "PasekToggleButton": "J",
+  "UiInfoSuite": true,
+  "ZoomButtons": false,
+  "FixSkullTime": true,
+  "DisableSkullShaftFix": false,
+  "LockMonsters": true,
+  "AnyCutscenePauses": false
+}
