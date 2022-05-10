@@ -674,7 +674,7 @@ namespace PauseInMultiplayer
                     Game1.chatBox.addErrorMessage($"Host Version: {this.ModManifest.Version} | {Game1.getFarmer(e.Peer.PlayerID).Name} Version: {pauseMod.Version}");
                 }
 
-                this.Helper.Multiplayer.SendMessage(this.pauseTimeAll, "sendPauseData", modIDs: new[] { this.ModManifest.UniqueID });
+                this.Helper.Multiplayer.SendMessage(this.pauseTimeAll, "updatePauseData", modIDs: new[] { this.ModManifest.UniqueID });
             }
         }
 
