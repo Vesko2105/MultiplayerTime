@@ -115,6 +115,10 @@ namespace PauseInMultiplayer
         {
             int width = (int)(108 - (Game1.getOnlineFarmers().Count - 1) * 4) / Game1.getOnlineFarmers().Count;
             int i = 0;
+            if (this.Config.UiInfoSuite)
+            {
+                b.Draw(PasekWithUIS, Game1.dayTimeMoneyBox.position + PasekPosition + new Vector2(0, -42), null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
+            }
             if (this.Config.ZoomButtons)
             {
                 b.Draw(PasekZoom, Game1.dayTimeMoneyBox.position + PasekPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
@@ -177,10 +181,6 @@ namespace PauseInMultiplayer
                     i++;
                 }
                 b.Draw(Pasek, Game1.dayTimeMoneyBox.position + PasekPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
-            }
-            if (this.Config.UiInfoSuite)
-            {
-                b.Draw(PasekWithUIS, Game1.dayTimeMoneyBox.position + PasekPosition + new Vector2(0, -42), null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
             }
         }
 
@@ -270,8 +270,8 @@ namespace PauseInMultiplayer
                 mod: this.ModManifest,
                 name: () => "Toggle pasek setup key",
                 tooltip: () => "Togles wether the pasek can be moved or not.",
-                getValue: () => this.Config.PasekToggleButton,
-                setValue: value => this.Config.PasekToggleButton = value
+                getValue: () => this.Config.PasekToggleSetupMode,
+                setValue: value => this.Config.PasekToggleSetupMode = value
             );
 
             configMenu.AddBoolOption(
@@ -784,9 +784,9 @@ namespace PauseInMultiplayer
         {
             public bool ShowPasek { get; set; } = false;
 
-            public SButton PasekToggleButton { get; set; } = SButton.K;
+            public SButton PasekToggleButton { get; set; } = SButton.J;
 
-            public SButton PasekToggleSetupMode { get; set; } = SButton.J;
+            public SButton PasekToggleSetupMode { get; set; } = SButton.K;
 
             public bool UiInfoSuite { get; set; } = false;
 
