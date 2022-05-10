@@ -113,10 +113,6 @@ namespace PauseInMultiplayer
         {
             int width = (int)(108 - (Game1.getOnlineFarmers().Count - 1) * 4) / Game1.getOnlineFarmers().Count;
             int i = 0;
-            if (this.Config.UiInfoSuite)
-            {
-                b.Draw(PasekWithUIS, Game1.dayTimeMoneyBox.position + PasekPosition + new Vector2(0, -42), null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
-            }
             if (this.Config.ZoomButtons)
             {
                 b.Draw(PasekZoom, Game1.dayTimeMoneyBox.position + PasekPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
@@ -149,7 +145,6 @@ namespace PauseInMultiplayer
             }
             else
             {
-                b.Draw(Pasek, Game1.dayTimeMoneyBox.position + PasekPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
                 foreach (Farmer farmer in Game1.getOnlineFarmers())
                 {
                     if (!pauseTimeAll![farmer.UniqueMultiplayerID])
@@ -179,6 +174,11 @@ namespace PauseInMultiplayer
                     }
                     i++;
                 }
+                b.Draw(Pasek, Game1.dayTimeMoneyBox.position + PasekPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
+            }
+            if (this.Config.UiInfoSuite)
+            {
+                b.Draw(PasekWithUIS, Game1.dayTimeMoneyBox.position + PasekPosition + new Vector2(0, -42), null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
             }
         }
 

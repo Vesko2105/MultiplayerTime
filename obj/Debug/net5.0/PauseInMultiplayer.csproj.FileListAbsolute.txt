@@ -18,3 +18,13 @@ D:\Documents\StardewWorkspace\TimeMods\MyMod\PauseInMultiplayer\obj\Debug\net5.0
 D:\Documents\StardewWorkspace\TimeMods\MyMod\PauseInMultiplayer\obj\Debug\net5.0\PauseInMultiplayer.csproj.CoreCompileInputs.cache
 D:\Documents\StardewWorkspace\TimeMods\MyMod\PauseInMultiplayer\obj\Debug\net5.0\PauseInMultiplayer.dll
 D:\Documents\StardewWorkspace\TimeMods\MyMod\PauseInMultiplayer\obj\Debug\net5.0\PauseInMultiplayer.pdb
+D:\Documents\PauseInMultiplayer\bin\Debug\net5.0\PauseInMultiplayer.deps.json
+D:\Documents\PauseInMultiplayer\bin\Debug\net5.0\PauseInMultiplayer.dll
+D:\Documents\PauseInMultiplayer\bin\Debug\net5.0\PauseInMultiplayer.pdb
+D:\Documents\PauseInMultiplayer\obj\Debug\net5.0\PauseInMultiplayer.csproj.AssemblyReference.cache
+D:\Documents\PauseInMultiplayer\obj\Debug\net5.0\PauseInMultiplayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\PauseInMultiplayer\obj\Debug\net5.0\PauseInMultiplayer.AssemblyInfoInputs.cache
+D:\Documents\PauseInMultiplayer\obj\Debug\net5.0\PauseInMultiplayer.AssemblyInfo.cs
+D:\Documents\PauseInMultiplayer\obj\Debug\net5.0\PauseInMultiplayer.csproj.CoreCompileInputs.cache
+D:\Documents\PauseInMultiplayer\obj\Debug\net5.0\PauseInMultiplayer.dll
+D:\Documents\PauseInMultiplayer\obj\Debug\net5.0\PauseInMultiplayer.pdb
