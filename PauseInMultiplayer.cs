@@ -611,7 +611,7 @@ namespace PauseInMultiplayer
             if (!Context.IsWorldReady) return;
 
             else if (e.Button == this.Config.PasekToggleButton)
-                this.Config.ShowPasek = false;
+                this.Config.ShowPasek = !this.Config.ShowPasek;
 
         }
 

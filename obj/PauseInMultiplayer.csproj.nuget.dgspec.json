@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\MultiplayerTime\\PauseInMultiplayer.csproj": {}
+    "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\PauseInMultiplayer\\PauseInMultiplayer.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\MultiplayerTime\\PauseInMultiplayer.csproj": {
+    "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\PauseInMultiplayer\\PauseInMultiplayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\MultiplayerTime\\PauseInMultiplayer.csproj",
+        "projectUniqueName": "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\PauseInMultiplayer\\PauseInMultiplayer.csproj",
         "projectName": "PauseInMultiplayer",
-        "projectPath": "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\MultiplayerTime\\PauseInMultiplayer.csproj",
+        "projectPath": "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\PauseInMultiplayer\\PauseInMultiplayer.csproj",
         "packagesPath": "C:\\Users\\vesko\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\MultiplayerTime\\obj\\",
+        "outputPath": "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\PauseInMultiplayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vesko\\AppData\\Roaming\\NuGet\\NuGet.Config",
