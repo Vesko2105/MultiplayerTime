@@ -46,9 +46,10 @@ namespace PauseInMultiplayer
         Texture2D? Green;
         Texture2D? Red;
 
-        Vector2 PasekPosition = new(44, 240);
-        Vector2 PasekPositionColor = new(68, 264);
-        Vector2 PasekZoomPositionColor = new(68, 292);
+        Vector2 PasekPosition = new(44, 244);
+        Vector2 PasekPositionColor = new(68, 268);
+        Vector2 UiInfoHooksPosition = new(44, 202);
+        Vector2 PasekZoomPositionColor = new(68, 296);
 
         //Additional methods
         private bool ShouldPause()
@@ -117,7 +118,7 @@ namespace PauseInMultiplayer
             int i = 0;
             if (this.Config.UiInfoSuite)
             {
-                b.Draw(PasekWithUIS, Game1.dayTimeMoneyBox.position + PasekPosition + new Vector2(0, -42), null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
+                b.Draw(PasekWithUIS, Game1.dayTimeMoneyBox.position + UiInfoHooksPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
             }
             if (this.Config.ZoomButtons)
             {
@@ -194,8 +195,8 @@ namespace PauseInMultiplayer
             this.PasekWithUIS = Helper.ModContent.Load<Texture2D>("assets/PasekWithUIS.png");
             this.PasekZoom = Helper.ModContent.Load<Texture2D>("assets/PasekZoom.png");
             this.Black = Helper.ModContent.Load<Texture2D>("assets/Black.png");
-            this.Blue = Helper.ModContent.Load<Texture2D>("assets/Blue.png");
-            this.Green = Helper.ModContent.Load<Texture2D>("assets/Green.png");
+            this.Blue = Helper.ModContent.Load<Texture2D>("assets/not-paused.png");
+            this.Green = Helper.ModContent.Load<Texture2D>("assets/paused.png");
             this.Red = Helper.ModContent.Load<Texture2D>("assets/Red.png");
             if (this.Config.UiInfoSuite)
             {
