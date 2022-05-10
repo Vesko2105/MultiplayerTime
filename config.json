@@ -1,7 +1,7 @@
 {
-  "ShowPasek": true,
-  "PasekToggleButton": "J",
-  "UiInfoSuite": true,
+  "ShowPasek": false,
+  "PasekToggleButton": "P",
+  "UiInfoSuite": false,
   "ZoomButtons": false,
   "FixSkullTime": true,
   "DisableSkullShaftFix": false,
