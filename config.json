@@ -1,10 +1,8 @@
 {
-  "ShowPasek": false,
-  "PasekToggleButton": "P",
-  "UiInfoSuite": false,
-  "ZoomButtons": false,
+  "ShowPauseX": true,
   "FixSkullTime": true,
   "DisableSkullShaftFix": false,
   "LockMonsters": true,
-  "AnyCutscenePauses": false
+  "EnableVotePause": true,
+  "VotePauseHotkey": "Pause"
 }
