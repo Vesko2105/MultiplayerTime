@@ -35,6 +35,8 @@ namespace PauseInMultiplayer
         bool pauseCommand = false;
         bool shouldPauseLast = false;
 
+        bool pasekSetupMode = false;
+
         //Pasek felds and assets
         Texture2D? Pasek;
         Texture2D? PasekWithUIS;
@@ -260,6 +262,14 @@ namespace PauseInMultiplayer
                 mod: this.ModManifest,
                 name: () => "Toggle pasek key",
                 tooltip: () => "Select the keybind for showing/hiding the pasek.",
+                getValue: () => this.Config.PasekToggleButton,
+                setValue: value => this.Config.PasekToggleButton = value
+            );
+
+            configMenu.AddKeybind(
+                mod: this.ModManifest,
+                name: () => "Toggle pasek setup key",
+                tooltip: () => "Togles wether the pasek can be moved or not.",
                 getValue: () => this.Config.PasekToggleButton,
                 setValue: value => this.Config.PasekToggleButton = value
             );
@@ -613,6 +623,36 @@ namespace PauseInMultiplayer
             else if (e.Button == this.Config.PasekToggleButton)
                 this.Config.ShowPasek = !this.Config.ShowPasek;
 
+            else if (e.Button == this.Config.PasekToggleSetupMode)
+                this.pasekSetupMode = !this.pasekSetupMode;
+
+            else if (this.pasekSetupMode && e.Button == SButton.Up)
+            {
+                PasekPosition.Y += 1;
+                PasekPositionColor.Y += 1;
+                PasekZoomPositionColor.Y += 1;
+            }
+
+            else if (this.pasekSetupMode && e.Button == SButton.Down)
+            {
+                PasekPosition.Y += -1;
+                PasekPositionColor.Y += -1;
+                PasekZoomPositionColor.Y += -1;
+            }
+
+            else if (this.pasekSetupMode && e.Button == SButton.Left)
+            {
+                PasekPosition.X += -1;
+                PasekPositionColor.X += -1;
+                PasekZoomPositionColor.X += -1;
+            }
+
+            else if (this.pasekSetupMode && e.Button == SButton.Right)
+            {
+                PasekPosition.X += 1;
+                PasekPositionColor.X += 1;
+                PasekZoomPositionColor.X += 1;
+            }
         }
 
         private void Multiplayer_ModMessageReceived(object? sender, ModMessageReceivedEventArgs e)
@@ -744,7 +784,9 @@ namespace PauseInMultiplayer
         {
             public bool ShowPasek { get; set; } = false;
 
-            public SButton PasekToggleButton { get; set; } = SButton.P;
+            public SButton PasekToggleButton { get; set; } = SButton.K;
+
+            public SButton PasekToggleSetupMode { get; set; } = SButton.J;
 
             public bool UiInfoSuite { get; set; } = false;
 
