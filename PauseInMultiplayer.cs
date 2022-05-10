@@ -46,10 +46,10 @@ namespace PauseInMultiplayer
         Texture2D? Green;
         Texture2D? Red;
 
-        Vector2 PasekPosition = new(44, 244);
-        Vector2 PasekPositionColor = new(68, 268);
+        Vector2 PasekPosition = new(44, 248);
+        Vector2 PasekPositionColor = new(68, 272);
         Vector2 UiInfoHooksPosition = new(44, 202);
-        Vector2 PasekZoomPositionColor = new(68, 296);
+        Vector2 PasekZoomPositionColor = new(68, 300);
 
         //Additional methods
         private bool ShouldPause()
