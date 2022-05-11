@@ -399,7 +399,7 @@ namespace PauseInMultiplayer
 
             //time should not be paused when using a tool
             if (Game1.player.UsingTool)
-                pauseTime2 = true;
+                pauseTime2 = false;
 
             //checks to see if the fishing rod has been cast. If this is true but the player is in the fishing minigame, the next if statement will pause - otherwise it won't
             if (Game1.player.CurrentItem != null && Game1.player.CurrentItem is StardewValley.Tools.FishingRod && (Game1.player.CurrentItem as StardewValley.Tools.FishingRod)!.isFishing)
