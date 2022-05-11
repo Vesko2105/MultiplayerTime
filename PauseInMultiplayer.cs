@@ -201,7 +201,7 @@ namespace PauseInMultiplayer
             this.Pasek = Helper.ModContent.Load<Texture2D>("assets/Pasek.png");
             this.PasekWithUIS = Helper.ModContent.Load<Texture2D>("assets/PasekWithUIS.png");
             this.PasekZoom = Helper.ModContent.Load<Texture2D>("assets/PasekZoom.png");
-            this.Black = Helper.ModContent.Load<Texture2D>("assets/Black.png");
+            this.Black = Helper.ModContent.Load<Texture2D>("assets/devider.png");
             this.Blue = Helper.ModContent.Load<Texture2D>("assets/not-paused.png");
             this.Green = Helper.ModContent.Load<Texture2D>("assets/paused.png");
             this.Red = Helper.ModContent.Load<Texture2D>("assets/Red.png");
