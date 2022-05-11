@@ -6,19 +6,19 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "PauseInMultiplayer/1.0.0": {
+      "MultiplayerTime/1.0.0": {
         "dependencies": {
           "Pathoschild.Stardew.ModBuildConfig": "4.0.1"
         },
         "runtime": {
-          "PauseInMultiplayer.dll": {}
+          "MultiplayerTime.dll": {}
         }
       },
       "Pathoschild.Stardew.ModBuildConfig/4.0.1": {}
     }
   },
   "libraries": {
-    "PauseInMultiplayer/1.0.0": {
+    "MultiplayerTime/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

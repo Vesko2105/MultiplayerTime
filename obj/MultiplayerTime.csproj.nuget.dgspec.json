@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\MultiplayerTime\\MultiplayerTime.csproj": {}
+    "D:\\Documents\\StardewWorkspace\\MultiplayerTime\\MultiplayerTime.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\MultiplayerTime\\MultiplayerTime.csproj": {
+    "D:\\Documents\\StardewWorkspace\\MultiplayerTime\\MultiplayerTime.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\MultiplayerTime\\MultiplayerTime.csproj",
+        "projectUniqueName": "D:\\Documents\\StardewWorkspace\\MultiplayerTime\\MultiplayerTime.csproj",
         "projectName": "MultiplayerTime",
-        "projectPath": "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\MultiplayerTime\\MultiplayerTime.csproj",
+        "projectPath": "D:\\Documents\\StardewWorkspace\\MultiplayerTime\\MultiplayerTime.csproj",
         "packagesPath": "C:\\Users\\vesko\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\StardewWorkspace\\TimeMods\\MyMod\\MultiplayerTime\\obj\\",
+        "outputPath": "D:\\Documents\\StardewWorkspace\\MultiplayerTime\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vesko\\AppData\\Roaming\\NuGet\\NuGet.Config",

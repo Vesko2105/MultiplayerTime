@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/xtmbfjC+p3fympYCAIKhYsFkXcCRgwmQEevrkjm+agRCyRxUT0gG2++aVcZpTr79+t4L0Yq7WrT6i6TfvExDQ==",
+  "dgSpecHash": "000zaUMB1RGIRpcwrVKGVYvtYa2na1Ei9HGezDQIDj+5/+WrHBdAdA7njVvZiSZPPoVf54bkvHaIFjBIpAPyDA==",
   "success": true,
-  "projectFilePath": "D:\\Documents\\PauseInMultiplayer\\PauseInMultiplayer.csproj",
+  "projectFilePath": "D:\\Documents\\StardewWorkspace\\MultiplayerTime\\MultiplayerTime.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vesko\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.0.1\\pathoschild.stardew.modbuildconfig.4.0.1.nupkg.sha512"
+    "C:\\Users\\vesko\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.0.1\\pathoschild.stardew.modbuildconfig.4.0.1.nupkg.sha512"
   ],
   "logs": []
 }
