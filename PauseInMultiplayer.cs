@@ -46,8 +46,8 @@ namespace PauseInMultiplayer
         Texture2D? Green;
         Texture2D? Red;
 
-        Vector2 PasekPosition = new(44, 248);
-        Vector2 PasekPositionColor = new(68, 272);
+        Vector2 PasekPosition = new(44, 206);
+        Vector2 PasekPositionColor = new (68, 230);
         Vector2 UiInfoHooksPosition = new(44, 202);
         Vector2 PasekZoomPositionColor = new(68, 300);
 
@@ -119,13 +119,13 @@ namespace PauseInMultiplayer
             if (this.Config.UiInfoSuite)
             {
                 b.Draw(PasekWithUIS, Game1.dayTimeMoneyBox.position + UiInfoHooksPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
-                PasekPosition = new(44, 248);
-                PasekPositionColor = new(68, 272);
+                PasekPosition = new(44, 290);
+                PasekPositionColor = new(68, 314);
             }
             else
             {
-                PasekPosition = new(44, 206);
-                PasekPositionColor = new(68, 240);
+                PasekPosition = new(44, 248);
+                PasekPositionColor = new(68, 272);
             }
             if (this.Config.ZoomButtons)
             {
