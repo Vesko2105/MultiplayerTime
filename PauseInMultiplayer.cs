@@ -1,9 +1,9 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
+using System;
 
 namespace PauseInMultiplayer
 {
@@ -26,7 +26,7 @@ namespace PauseInMultiplayer
         System.Collections.Generic.IDictionary<long, bool>? eventStatus;
 
         int healthLock = -100;
-        System.Collections.Generic.Dictionary<StardewValley.Monsters.Monster, Vector2> monsterLocks = new System.Collections.Generic.Dictionary<StardewValley.Monsters.Monster, Vector2>();
+        System.Collections.Generic.Dictionary<StardewValley.Monsters.Monster, Vector2> monsterLocks = new();
         bool lockMonsters = false;
         int timeInterval = -100;
         int foodDuration = -100;
@@ -47,7 +47,7 @@ namespace PauseInMultiplayer
         Texture2D? Red;
 
         Vector2 PasekPosition = new(44, 206);
-        Vector2 PasekPositionColor = new (68, 230);
+        Vector2 PasekPositionColor = new(68, 230);
         Vector2 UiInfoHooksPosition = new(44, 202);
         Vector2 PasekZoomPositionColor = new(68, 300);
 
@@ -94,7 +94,7 @@ namespace PauseInMultiplayer
         private void DrawFade(SpriteBatch b)
         {
             string text = Game1.shortDayNameFromDayOfSeason(Game1.dayOfMonth) + ". " + Game1.dayOfMonth;
-            Vector2 dayPosition = new Vector2((float)Math.Floor(183.5f - Game1.dialogueFont.MeasureString(text).X / 2), (float)18);
+            Vector2 dayPosition = new((float)Math.Floor(183.5f - Game1.dialogueFont.MeasureString(text).X / 2), (float)18);
             b.DrawString(Game1.dialogueFont, text, Game1.dayTimeMoneyBox.position + dayPosition, textColor);
             string timeofDay = (Game1.timeOfDay < 1200 || Game1.timeOfDay >= 2400) ? " am" : " pm";
             string zeroPad = (Game1.timeOfDay % 100 == 0) ? "0" : "";
@@ -107,7 +107,7 @@ namespace PauseInMultiplayer
                 zeroPad,
                 timeofDay
             });
-            Vector2 timePosition = new Vector2((float)Math.Floor(183.5 - Game1.dialogueFont.MeasureString(time).X / 2), (float)108);
+            Vector2 timePosition = new((float)Math.Floor(183.5 - Game1.dialogueFont.MeasureString(time).X / 2), (float)108);
             bool nofade = !ShouldPause() || Game1.currentGameTime.TotalGameTime.TotalMilliseconds % 2000.0 > 1000.0;
             b.DrawString(Game1.dialogueFont, time, Game1.dayTimeMoneyBox.position + timePosition, (Game1.timeOfDay >= 2400) ? Color.Red : (textColor * (nofade ? 1f : 0.5f)));
         }
@@ -340,17 +340,14 @@ namespace PauseInMultiplayer
             //only the main player will use this dictionary
             if (Context.IsMainPlayer)
             {
-                pauseTimeAll = new System.Collections.Generic.Dictionary<long, bool>();
-                pauseTimeAll[Game1.player.UniqueMultiplayerID] = false;
+                pauseTimeAll = new System.Collections.Generic.Dictionary<long, bool>() { [Game1.player.UniqueMultiplayerID] = false };
 
-                inSkullAll = new System.Collections.Generic.Dictionary<long, bool>();
-                inSkullAll[Game1.player.UniqueMultiplayerID] = false;
+                inSkullAll = new System.Collections.Generic.Dictionary<long, bool>() { [Game1.player.UniqueMultiplayerID] = false };
 
                 //setup lockMonsters for main player
                 lockMonsters = this.Config.LockMonsters;
 
-                eventStatus = new System.Collections.Generic.Dictionary<long, bool>();
-                eventStatus[Game1.player.UniqueMultiplayerID] = false;
+                eventStatus = new System.Collections.Generic.Dictionary<long, bool>() { [Game1.player.UniqueMultiplayerID] = false };
             }
         }
 
@@ -502,7 +499,7 @@ namespace PauseInMultiplayer
                     //pause all Monsters
                     if (lockMonsters)
                     {
-                        System.Collections.Generic.List<GameLocation> farmerLocations = new System.Collections.Generic.List<GameLocation>();
+                        System.Collections.Generic.List<GameLocation> farmerLocations = new();
 
                         foreach (Farmer f in Game1.getOnlineFarmers())
                             farmerLocations.Add(f.currentLocation);
@@ -611,7 +608,7 @@ namespace PauseInMultiplayer
                 }
             }
 
-            if(Context.IsMainPlayer)
+            if (Context.IsMainPlayer)
             {
                 this.Helper.Multiplayer.SendMessage(this.pauseTimeAll, "updatePauseData", modIDs: new[] { this.ModManifest.UniqueID });
             }
@@ -683,7 +680,7 @@ namespace PauseInMultiplayer
                 {
                     this.lockMonsters = e.ReadAs<bool>();
                 }
-                else if(e.FromModID == this.ModManifest.UniqueID && e.Type == "updatePauseData")
+                else if (e.FromModID == this.ModManifest.UniqueID && e.Type == "updatePauseData")
                 {
                     this.pauseTimeAll = e.ReadAs<System.Collections.Generic.IDictionary<long, bool>>();
                 }
@@ -699,10 +696,10 @@ namespace PauseInMultiplayer
                 eventStatus![e.Peer.PlayerID] = false;
 
                 //send current pause stat
-                this.Helper.Multiplayer.SendMessage(shouldPauseLast ? true : false, "pauseCommand", new[] { this.ModManifest.UniqueID }, new[] { e.Peer.PlayerID });
+                this.Helper.Multiplayer.SendMessage(shouldPauseLast, "pauseCommand", new[] { this.ModManifest.UniqueID }, new[] { e.Peer.PlayerID });
 
                 //send message denoting whether or not monsters will be locked
-                this.Helper.Multiplayer.SendMessage(lockMonsters ? true : false, "lockMonsters", modIDs: new[] { this.ModManifest.UniqueID }, playerIDs: new[] { e.Peer.PlayerID });
+                this.Helper.Multiplayer.SendMessage(lockMonsters, "lockMonsters", modIDs: new[] { this.ModManifest.UniqueID }, playerIDs: new[] { e.Peer.PlayerID });
 
 
                 //check for version match
