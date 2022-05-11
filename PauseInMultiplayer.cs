@@ -119,6 +119,13 @@ namespace PauseInMultiplayer
             if (this.Config.UiInfoSuite)
             {
                 b.Draw(PasekWithUIS, Game1.dayTimeMoneyBox.position + UiInfoHooksPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
+                PasekPosition = new(44, 248);
+                PasekPositionColor = new(68, 272);
+            }
+            else
+            {
+                PasekPosition = new(44, 206);
+                PasekPositionColor = new(68, 240);
             }
             if (this.Config.ZoomButtons)
             {
@@ -198,12 +205,6 @@ namespace PauseInMultiplayer
             this.Blue = Helper.ModContent.Load<Texture2D>("assets/not-paused.png");
             this.Green = Helper.ModContent.Load<Texture2D>("assets/paused.png");
             this.Red = Helper.ModContent.Load<Texture2D>("assets/Red.png");
-            if (this.Config.UiInfoSuite)
-            {
-                PasekPosition.Y += 42;
-                PasekPositionColor.Y += 42;
-                PasekZoomPositionColor.Y += 42;
-            }
 
             //checks if "Skull Cavern Elevator" mod is in use
             bool skullElevatorMod = Helper.ModRegistry.Get("SkullCavernElevator") != null;
@@ -629,30 +630,30 @@ namespace PauseInMultiplayer
 
             else if (this.pasekSetupMode && e.Button == SButton.Up)
             {
-                PasekPosition.Y += 1;
-                PasekPositionColor.Y += 1;
-                PasekZoomPositionColor.Y += 1;
+                PasekPosition.Y -= 1;
+                PasekPositionColor.Y -= 1;
+                PasekZoomPositionColor.Y -= 1;
             }
 
             else if (this.pasekSetupMode && e.Button == SButton.Down)
             {
-                PasekPosition.Y += -1;
-                PasekPositionColor.Y += -1;
-                PasekZoomPositionColor.Y += -1;
+                PasekPosition.Y += +1;
+                PasekPositionColor.Y += +1;
+                PasekZoomPositionColor.Y += +1;
             }
 
             else if (this.pasekSetupMode && e.Button == SButton.Left)
             {
-                PasekPosition.X += -1;
-                PasekPositionColor.X += -1;
-                PasekZoomPositionColor.X += -1;
+                PasekPosition.X += +1;
+                PasekPositionColor.X += +1;
+                PasekZoomPositionColor.X += +1;
             }
 
             else if (this.pasekSetupMode && e.Button == SButton.Right)
             {
-                PasekPosition.X += 1;
-                PasekPositionColor.X += 1;
-                PasekZoomPositionColor.X += 1;
+                PasekPosition.X -= 1;
+                PasekPositionColor.X -= 1;
+                PasekZoomPositionColor.X -= 1;
             }
         }
 
