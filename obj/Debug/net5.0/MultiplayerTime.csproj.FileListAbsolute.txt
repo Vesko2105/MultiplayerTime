@@ -18,3 +18,13 @@ D:\Documents\StardewWorkspace\TimeMods\MyMod\MultiplayerTime\obj\Debug\net5.0\Mu
 D:\Documents\StardewWorkspace\TimeMods\MyMod\MultiplayerTime\obj\Debug\net5.0\MultiplayerTime.csproj.CoreCompileInputs.cache
 D:\Documents\StardewWorkspace\TimeMods\MyMod\MultiplayerTime\obj\Debug\net5.0\MultiplayerTime.dll
 D:\Documents\StardewWorkspace\TimeMods\MyMod\MultiplayerTime\obj\Debug\net5.0\MultiplayerTime.pdb
+D:\Documents\StardewWorkspace\MultiplayerTime\bin\Debug\net5.0\MultiplayerTime.deps.json
+D:\Documents\StardewWorkspace\MultiplayerTime\bin\Debug\net5.0\MultiplayerTime.dll
+D:\Documents\StardewWorkspace\MultiplayerTime\bin\Debug\net5.0\MultiplayerTime.pdb
+D:\Documents\StardewWorkspace\MultiplayerTime\obj\Debug\net5.0\MultiplayerTime.csproj.AssemblyReference.cache
+D:\Documents\StardewWorkspace\MultiplayerTime\obj\Debug\net5.0\MultiplayerTime.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\StardewWorkspace\MultiplayerTime\obj\Debug\net5.0\MultiplayerTime.AssemblyInfoInputs.cache
+D:\Documents\StardewWorkspace\MultiplayerTime\obj\Debug\net5.0\MultiplayerTime.AssemblyInfo.cs
+D:\Documents\StardewWorkspace\MultiplayerTime\obj\Debug\net5.0\MultiplayerTime.csproj.CoreCompileInputs.cache
+D:\Documents\StardewWorkspace\MultiplayerTime\obj\Debug\net5.0\MultiplayerTime.dll
+D:\Documents\StardewWorkspace\MultiplayerTime\obj\Debug\net5.0\MultiplayerTime.pdb

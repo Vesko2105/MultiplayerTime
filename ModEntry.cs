@@ -685,7 +685,7 @@ namespace MultiplayerTime
                 eventStatus!.Remove(e.Peer.PlayerID);
             }
         }
-
+        [EventPriority(EventPriority.High)]
         private void PreRenderHud(object? sender, RenderingHudEventArgs e)
         {
             if (ShouldPause())
@@ -699,6 +699,7 @@ namespace MultiplayerTime
             }
         }
 
+        [EventPriority(EventPriority.High)]
         private void PostRenderHud(object? sender, RenderedHudEventArgs e)
         {
             if (ShouldPause())
@@ -708,6 +709,7 @@ namespace MultiplayerTime
             Game1.textColor = textColor;
         }
 
+        [EventPriority(EventPriority.High)]
         private void Display_Rendered(object? sender, RenderedEventArgs e)
         {
             if (Context.IsWorldReady)
