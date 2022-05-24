@@ -5,5 +5,5 @@
   "Description": "Pauses time in multiplayer when all connected players should have their time paused.",
   "UniqueID": "Vesko01.MultiplayerTime",
   "EntryDll": "MultiplayerTime.dll",
-  "UpdateKeys": ["Nexus:10328"]
+  "UpdateKeys": [ "GitHub:Vesko2105/MultiplayerTime" ]
 }
