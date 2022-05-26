@@ -492,8 +492,11 @@ namespace MultiplayerTime
                         System.Collections.Generic.List<GameLocation> farmerLocations = new();
 
                         foreach (Farmer f in Game1.getOnlineFarmers())
+                        {
+                            if(f == null) continue;
                             farmerLocations.Add(f.currentLocation);
-
+                        }
+///
                         foreach (GameLocation location in farmerLocations)
                         {
                             if(location == null) continue;
