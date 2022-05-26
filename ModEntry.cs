@@ -496,6 +496,8 @@ namespace MultiplayerTime
 
                         foreach (GameLocation location in farmerLocations)
                         {
+                            if(location == null) continue;
+
                             foreach (Character character in location.characters)
                             {
                                 if (character != null && character is StardewValley.Monsters.Monster)
