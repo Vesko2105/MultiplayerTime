@@ -44,9 +44,9 @@ namespace MultiplayerTime
         Texture2D? Green;
         Texture2D? Red;
 
-        Vector2 PasekPosition = new(44, 206);
-        Vector2 PasekPositionColor = new(68, 230);
-        Vector2 UiInfoHooksPosition = new(44, 202);
+        Vector2 PasekPosition = new(44, 240);
+        Vector2 PasekPositionColor = new(68, 264);
+        Vector2 UiInfoHooksPosition = new(44, 240);
         Vector2 PasekZoomPositionColor = new(68, 300);
 
         //Additional methods
@@ -116,41 +116,41 @@ namespace MultiplayerTime
             int i = 0;
             if (this.Config.UiInfoSuite)
             {
-                b.Draw(PasekWithUIS, Game1.dayTimeMoneyBox.position + UiInfoHooksPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
-                PasekPosition = new(44, 290);
-                PasekPositionColor = new(68, 314);
+                b.Draw(PasekWithUIS, Game1.dayTimeMoneyBox.position + UiInfoHooksPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 1.0f);
+                PasekPosition = new(44, 288);
+                PasekPositionColor = new(68, 312);
             }
             else
             {
-                PasekPosition = new(44, 248);
-                PasekPositionColor = new(68, 272);
+                PasekPosition = new(44, 240);
+                PasekPositionColor = new(68, 264);
             }
             if (this.Config.ZoomButtons)
             {
-                b.Draw(PasekZoom, Game1.dayTimeMoneyBox.position + PasekPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
+                b.Draw(PasekZoom, Game1.dayTimeMoneyBox.position + PasekPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 1000.0f);
                 foreach (Farmer farmer in Game1.getOnlineFarmers())
                 {
                     if (!pauseTimeAll![farmer.UniqueMultiplayerID])
                     {
-                        b.Draw(Blue, Game1.dayTimeMoneyBox.position + PasekZoomPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 0.99f);
+                        b.Draw(Blue, Game1.dayTimeMoneyBox.position + PasekZoomPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 1000.0f);
                         if (Context.IsMainPlayer)
                         {
                             foreach (IMultiplayerPeer peer in Helper.Multiplayer.GetConnectedPlayers())
                             {
                                 if (peer.GetMod(this.ModManifest.UniqueID) == null && peer.PlayerID == farmer.UniqueMultiplayerID)
                                 {
-                                    b.Draw(Red, Game1.dayTimeMoneyBox.position + PasekZoomPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 0.99f);
+                                    b.Draw(Red, Game1.dayTimeMoneyBox.position + PasekZoomPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 1000.0f);
                                 }
                             }
                         }
                     }
                     else
                     {
-                        b.Draw(Green, Game1.dayTimeMoneyBox.position + PasekZoomPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 0.99f);
+                        b.Draw(Green, Game1.dayTimeMoneyBox.position + PasekZoomPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 1000.0f);
                     }
                     if (i != Game1.getOnlineFarmers().Count - 1)
                     {
-                        b.Draw(Black, Game1.dayTimeMoneyBox.position + PasekZoomPositionColor + new Vector2(i * (width + 4) + width, 0), new Rectangle(i * (width + 4) + width, 0, 4, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 0.99f);
+                        b.Draw(Black, Game1.dayTimeMoneyBox.position + PasekZoomPositionColor + new Vector2(i * (width + 4) + width, 0), new Rectangle(i * (width + 4) + width, 0, 4, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 1000.0f);
                     }
                     i++;
                 }
@@ -161,7 +161,7 @@ namespace MultiplayerTime
                 {
                     if (!pauseTimeAll![farmer.UniqueMultiplayerID])
                     {
-                        b.Draw(Blue, Game1.dayTimeMoneyBox.position + PasekPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 0.99f);
+                        b.Draw(Blue, Game1.dayTimeMoneyBox.position + PasekPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 1000.0f);
                         if (Context.IsMainPlayer)
                         {
                             foreach (IMultiplayerPeer peer in Helper.Multiplayer.GetConnectedPlayers())
@@ -170,7 +170,7 @@ namespace MultiplayerTime
                                 {
                                     if (peer.PlayerID == farmer.UniqueMultiplayerID)
                                     {
-                                        b.Draw(Red, Game1.dayTimeMoneyBox.position + PasekPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 0.99f);
+                                        b.Draw(Red, Game1.dayTimeMoneyBox.position + PasekPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 1000.0f);
                                     }
                                 }
                             }
@@ -178,15 +178,15 @@ namespace MultiplayerTime
                     }
                     else
                     {
-                        b.Draw(Green, Game1.dayTimeMoneyBox.position + PasekPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 0.99f);
+                        b.Draw(Green, Game1.dayTimeMoneyBox.position + PasekPositionColor + new Vector2(i * (width + 4), 0), new Rectangle(0, 0, width, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, -10f);
                     }
                     if (i != Game1.getOnlineFarmers().Count - 1)
                     {
-                        b.Draw(Black, Game1.dayTimeMoneyBox.position + PasekPositionColor + new Vector2(i * (width + 4) + width, 0), new Rectangle(i * (width + 4) + width, 0, 4, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 0.99f);
+                        b.Draw(Black, Game1.dayTimeMoneyBox.position + PasekPositionColor + new Vector2(i * (width + 4) + width, 0), new Rectangle(i * (width + 4) + width, 0, 4, 24), Color.White, 0.0f, Vector2.Zero, 1, SpriteEffects.None, 1000.0f);
                     }
                     i++;
                 }
-                b.Draw(Pasek, Game1.dayTimeMoneyBox.position + PasekPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 0.99f);
+                b.Draw(Pasek, Game1.dayTimeMoneyBox.position + PasekPosition, null, Color.White, 0.0f, Vector2.Zero, 4, SpriteEffects.None, 1000.0f);
             }
         }
 
@@ -200,7 +200,7 @@ namespace MultiplayerTime
             this.PasekWithUIS = Helper.ModContent.Load<Texture2D>("assets/PasekWithUIS.png");
             this.PasekZoom = Helper.ModContent.Load<Texture2D>("assets/PasekZoom.png");
             this.Black = Helper.ModContent.Load<Texture2D>("assets/devider.png");
-            this.Blue = Helper.ModContent.Load<Texture2D>("assets/not-paused.png");
+            this.Blue = Helper.ModContent.Load<Texture2D>("assets/not-paused.png"); 
             this.Green = Helper.ModContent.Load<Texture2D>("assets/paused.png");
             this.Red = Helper.ModContent.Load<Texture2D>("assets/Red.png");
 
@@ -611,6 +611,14 @@ namespace MultiplayerTime
 
             else if (e.Button == this.Config.PasekToggleButton)
                 this.Config.ShowPasek = !this.Config.ShowPasek;
+            else if (e.Button == SButton.Up)
+                UiInfoHooksPosition.Y--;
+            else if (e.Button == SButton.Down)
+                UiInfoHooksPosition.Y++;
+            else if (e.Button == SButton.Left)
+                UiInfoHooksPosition.X++;
+            else if (e.Button == SButton.Right)
+                UiInfoHooksPosition.X--;
         }
 
         private void Multiplayer_ModMessageReceived(object? sender, ModMessageReceivedEventArgs e)
